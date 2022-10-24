@@ -7,7 +7,6 @@ def index():
 
 @app.route('/results', methods=['POST'])
 def results():
-    print('Thanks')
     print(request.form)
     session['name'] = request.form['name']
     session['dojo'] = request.form['dojo']
