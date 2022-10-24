@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <th>
+                        Submitted Info
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name: </td>
+                        <td> {{session['name']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Dojo Location: </td>
+                        <td>{{session['dojo']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Favorite Language: </td>
+                        <td>{{session['favLang']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Comment: </td>
+                        <td>{{session['comment']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="mb-4">
+            <a class="btn btn-primary btn-lg btn-block" href="/">Go Back</a>
+
+        </div>
+    </div>
+</body>
+
+</html>
